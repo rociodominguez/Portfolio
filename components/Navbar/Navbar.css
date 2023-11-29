@@ -1,0 +1,13 @@
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+}
+
+nav {
+    margin: 1rem 0 1.5rem 0;
+}
+
+a {
+    color: var(--primary-color);
+}

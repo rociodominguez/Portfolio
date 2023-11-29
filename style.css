@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 1.5rem;
+    font-family: 'Segoe UI';
+    background-color: var(--bg-color);
+}
+
+:root {
+    --bg-color: #24292E;
+    --primary-color: #f2f2f2;
+    --secondary-color: #FFDE59;
+}
