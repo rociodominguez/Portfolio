@@ -29,7 +29,6 @@ const printContactForm = () => {
   
       fieldDiv.appendChild(label);
       fieldDiv.appendChild(input);
-  
       form.appendChild(fieldDiv);
     });
   

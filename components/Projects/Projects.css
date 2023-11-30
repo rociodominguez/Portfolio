@@ -1,11 +1,92 @@
-h2 {
-    color: var(--secondary-color);
-}
-
-h3 {
-    color: var(--primary-color);
+.projects-container > h2 {
+  margin: 1.7rem 0 1.5rem 0;
+  font-family: "Mono";
+  font-size: 27px;
+  color: var(--secondary-color);
 }
 
 .projects-container {
-    margin: 1.2rem 0 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.card {
+    position: relative;
+    width: 320px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    color: var(--primary-color);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content .heading {
+    font-weight: 700;
+    font-size: 25px;
+  }
+  
+  .content .para {
+    line-height: 1.5;
+  }
+  
+  .content .btn {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, var(--secondary-color) 0%, var(--terciary-color) 100%);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px var(--shadow-color);
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(-45deg, var(--secondary-color) 0%, var(--terciary-color) 100%);
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover::before {
+    width: 100%;
+  }
+  
+  .card:hover {
+    box-shadow: none;
+  }
+  
+  .card:hover .btn {
+    color: var(--bg-color);
+    background: var(--primary-color);
+  }
+  
+  .content .btn:hover {
+    outline: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+  }
+  
+  .content .btn:active {
+    box-shadow: none;
+  }
+  
+  .technologies {
+    width: 30px;
+  }

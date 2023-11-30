@@ -12,12 +12,25 @@ html {
 
 body {
     padding: 1.5rem;
-    font-family: 'Segoe UI';
+    font-family: "Manrope";
     background-color: var(--bg-color);
 }
 
 :root {
     --bg-color: #24292E;
     --primary-color: #f2f2f2;
-    --secondary-color: #FFDE59;
+    --secondary-color: #f89b29;
+    --secondary-opacity:#f89b29e8;
+    --terciary-color: #ff0f7b;
+    --shadow-color: rgba(183, 183, 183, 0.2);
+}
+
+@font-face {
+    font-family: "Mono";
+    src: url(./public/assets/fonts/Mono.ttf);
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url(./public/assets/fonts/Manrope.ttf);
 }
