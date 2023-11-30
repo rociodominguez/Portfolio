@@ -35,3 +35,10 @@ background-image: url("https://www.transparenttextures.com/patterns/black-thread
     font-family: "Manrope";
     src: url(/assets/fonts/Manrope.ttf);
 }
+
+@media (max-width: 576px) {
+
+    body {
+        padding: 1.5rem;
+    }
+  }
