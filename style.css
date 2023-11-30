@@ -11,9 +11,10 @@ html {
 }
 
 body {
-    padding: 1.5rem;
+    padding: 3rem;
     font-family: "Manrope";
     background-color: var(--bg-color);
+background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
 }
 
 :root {
@@ -27,10 +28,10 @@ body {
 
 @font-face {
     font-family: "Mono";
-    src: url(./public/assets/fonts/Mono.ttf);
+    src: url(/assets/fonts/Mono.ttf);
 }
 
 @font-face {
     font-family: "Manrope";
-    src: url(./public/assets/fonts/Manrope.ttf);
+    src: url(/assets/fonts/Manrope.ttf);
 }

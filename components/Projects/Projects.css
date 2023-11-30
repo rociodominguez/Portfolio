@@ -90,3 +90,19 @@
   .technologies {
     width: 30px;
   }
+
+  @media (min-width: 576px) {
+    .projects-container {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .projects-container > h2 {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      margin-bottom: 3rem;
+    }
+  }

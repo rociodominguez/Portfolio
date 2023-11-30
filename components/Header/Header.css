@@ -43,3 +43,14 @@ a.btn {
     background-color: transparent;
     color: var(--secondary-color);
   }
+
+  @media (min-width: 576px) {
+    .avatar {
+        width: 15%;
+    }
+
+    header > p:last-child {
+        margin: 1rem 7rem 1rem 7rem;
+        text-align: center;
+    }
+  }
