@@ -1,0 +1,15 @@
+.div-info {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 1080px) {
+    .div-info {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  }
+  

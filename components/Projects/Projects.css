@@ -1,108 +1,109 @@
-.projects-container > h2 {
-  margin: 1.7rem 0 1.5rem 0;
-  font-family: "Mono";
-  font-size: 27px;
-  color: var(--secondary-color);
+.card {
+  border-radius: 10px;
+  box-shadow: 0 10px 20px var(--shadow-color);
+  margin-top: 1rem;
+  overflow: hidden;
+  padding: 32px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 320px;
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.card:hover .btn {
+  background: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.card:hover::before {
+  width: 100%;
+}
+
+.card::before {
+  background: linear-gradient(-45deg, var(--secondary-color) 0%, var(--terciary-color) 100%);
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 5px;
+  z-index: -1;
+}
+
+.content {
+  align-items: flex-start;
+  color: var(--primary-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .btn {
+  background: linear-gradient(-45deg, var(--secondary-color) 0%, var(--terciary-color) 100%);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px var(--shadow-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, outline 0.3s;
+}
+
+.content .btn:active {
+  box-shadow: none;
+}
+
+.content .btn:hover {
+  background: transparent;
+  color: var(--primary-color);
+  outline: 2px solid var(--primary-color);
+}
+
+.content .heading {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.content .para {
+  line-height: 1.5;
+}
+
+.content .technologies {
+  width: 30px;
 }
 
 .projects-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 1.5rem;
 }
 
-.card {
-    position: relative;
-    width: 320px;
-    box-shadow: 0 10px 20px var(--shadow-color);
-    padding: 32px;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    margin-bottom: 1.5rem;
-  }
-  
-  .content {
-    display: flex;
+@media (min-width: 576px) {
+  .projects-container {
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 20px;
-    color: var(--primary-color);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    justify-content: space-between;
   }
-  
-  .content .heading {
-    font-weight: 700;
-    font-size: 25px;
-  }
-  
-  .content .para {
-    line-height: 1.5;
-  }
-  
-  .content .btn {
-    color: var(--primary-color);
-    text-decoration: none;
-    padding: 10px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    background: linear-gradient(-45deg, var(--secondary-color) 0%, var(--terciary-color) 100%);
-    border-radius: 5px;
-    box-shadow: 0 5px 10px var(--shadow-color);
-  }
-  
-  .card::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 5px;
-    height: 100%;
-    background: linear-gradient(-45deg, var(--secondary-color) 0%, var(--terciary-color) 100%);
-    z-index: -1;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-  }
-  
-  .card:hover::before {
+
+  .projects-container > h2 {
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
-  
-  .card:hover {
-    box-shadow: none;
-  }
-  
-  .card:hover .btn {
-    color: var(--bg-color);
-    background: var(--primary-color);
-  }
-  
-  .content .btn:hover {
-    outline: 2px solid var(--primary-color);
-    background: transparent;
-    color: var(--primary-color);
-  }
-  
-  .content .btn:active {
-    box-shadow: none;
-  }
-  
-  .technologies {
-    width: 30px;
-  }
+}
 
-  @media (min-width: 576px) {
-    .projects-container {
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-
-    .projects-container > h2 {
-      width: 100%;
-      justify-content: center;
-      display: flex;
-      margin-bottom: 3rem;
-    }
-  }
+.projects-container > h2 {
+  color: var(--secondary-color);
+  font-family: "Mono";
+  font-size: 27px;
+  margin: 0;
+  width: 100%;
+}
