@@ -72,7 +72,7 @@ ul.show li {
 }
 
 .my-toggle {
-  display: none;
+  display: block;
   width: 40px;
 }
 
